@@ -67,3 +67,10 @@ jobs:
           manifests: |
             k8s/mongodb/deployment.yml
             k8s/mongodb/service.yml
+      
+      - name: Deploy WebAPI to Kubernetes cluster
+        uses: Azure/k8s-deploy@v1.3
+        with:
+          images: angolar/api-produto:v${{github.run_number}}
+          manifests: |
+            k8s/api/deployment.yml
