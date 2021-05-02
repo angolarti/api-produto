@@ -33,7 +33,7 @@ jobs:
           # Path to the Dockerfile
           file: ./src/Dockerfile
           push: true
-          tags:
+          tags: |
             angolar/api-produto:latest
             angolar/api-produto:v${{github.run_nuumber}}
       
